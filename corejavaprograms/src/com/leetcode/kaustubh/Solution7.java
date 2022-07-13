@@ -37,7 +37,7 @@ public class Solution7
 		}  
 		Solution7 s7 = new Solution7();  
 		sc.close();
-		System.out.println("All pairs of elements with the minimum absolute difference of any two elements:"+s7.minimumAbsDifference(arr));  
+		System.out.println("All pairs of elements with the minimum absolute difference of any two element is :"+s7.minimumAbsDifference(arr));  
 	}  
 
 }
