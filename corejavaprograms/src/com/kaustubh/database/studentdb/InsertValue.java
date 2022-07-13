@@ -16,28 +16,28 @@ public class InsertValue
 		{
 			st=c.createStatement();
 			c.setAutoCommit(false);
-			String query=" INSERT INTO BOOK VALUES(?,?,?,?)";
+			String query=" INSERT INTO BOOK(bookname,bookid,noofpages,authorname)"+" VALUES(?,?,?,?)";
 			PreparedStatement  pstmt= c.prepareStatement(query);
 			pstmt.setString(1,"Rich Dad poor Dad");
-			pstmt.setString(1,"T101");
+			pstmt.setString(2,"T101");
 			pstmt.setInt(3, 100);
 			pstmt.setString(4,"Robert Kiyosaki");
 			pstmt.addBatch();
 			pstmt.setString(1,"Secret");
-			pstmt.setString(1,"T102");
+			pstmt.setString(2,"T102");
 			pstmt.setInt(3, 186);
 			pstmt.setString(4,"Rhonda Byrne");
 			pstmt.addBatch();
 			pstmt.setString(1,"Power of subconsicious mind");
-			pstmt.setString(1,"T103");
+			pstmt.setString(2,"T103");
 			pstmt.setInt(3, 100);
 			pstmt.setString(4,"Joseph murphy");
-			pstmt.addBatch();
-			st.executeBatch();
+			pstmt.addBatch(); 
+			int[] count=pstmt.executeBatch(); 
 			c.commit();
 			st.close(); 
 			c.close();
-			System.out.println("Records inserted.....");                 
+			System.out.println("Records inserted..... into Book"+count.length);                 
 		}
 		catch (Exception e) 
 		{
