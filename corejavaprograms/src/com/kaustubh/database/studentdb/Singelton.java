@@ -13,13 +13,12 @@ public class Singelton
 		Connection connect = null;
 		try 
 		{
-			if (connect == null) 
+			if (connect == null)  
 			{
 
 				System.out.println("in Connection try .........");
-				Class.forName("org.postgresql.Driver"); // 1. load and register drivers
-				connect = DriverManager.getConnection(jdbcUrl, username, password); // 2. create connection between database
-																				// and java application
+				Class.forName("org.postgresql.Driver"); 			
+				connect = DriverManager.getConnection(jdbcUrl, username, password); 
 				System.out.println("connection " + connect);
 				System.out.println("Connection to database  Selfbook sucessfully");
 
