@@ -1,1 +1,31 @@
-create table 
+-- Database: Selfbook
+
+-- DROP DATABASE IF EXISTS "Selfbook";
+
+CREATE DATABASE "Selfbook"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_India.1252'
+    LC_CTYPE = 'English_India.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+-- Table: public.book
+
+-- DROP TABLE IF EXISTS public.book;
+
+CREATE TABLE IF NOT EXISTS public.book
+(
+    bookname character varying(200) COLLATE pg_catalog."default",
+    bookid character varying(20) COLLATE pg_catalog."default",
+    noofpages integer,
+    authorname character varying(50) COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.book
+    OWNER to postgres;
+    
+    c

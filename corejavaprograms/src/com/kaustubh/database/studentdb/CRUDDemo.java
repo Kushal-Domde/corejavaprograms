@@ -23,7 +23,7 @@ public class CRUDDemo
 		try
 		{
      		Connection connect = null; 
-			Statement stmt = null;
+			Statement	 stmt = null;
 			Singelton single=new Singelton();
 			connect=single.getConnection();
 			stmt=connect.createStatement();
@@ -43,10 +43,8 @@ public class CRUDDemo
 		try
 		{
 			Connection connect = null; 
-			Statement stmt = null;
 			Singelton single=new Singelton();
 			connect=single.getConnection();
-			stmt=connect.createStatement();
 			connect.setAutoCommit(false);
 			String query=" INSERT INTO Book5(Bookname,Bookid,noofpages,authorname)"+" VALUES(?,?,?,?)";
 			PreparedStatement  pstmt= connect.prepareStatement(query);
@@ -56,8 +54,8 @@ public class CRUDDemo
 			pstmt.setString(4,"Robert Kiyosaki");
 			pstmt.addBatch();
 			int[] count=pstmt.executeBatch();
-			connect.commit();
-			stmt.close(); 
+			 connect.commit();
+			
 			connect.close();
 			System.out.println(count.length+"Records inserted..... into Book5 ");                 
 		}
