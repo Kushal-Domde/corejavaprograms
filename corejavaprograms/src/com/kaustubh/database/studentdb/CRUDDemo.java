@@ -10,8 +10,8 @@ public class CRUDDemo
 	public static void main(String[] args)
 	{
 		CRUDDemo crud=new CRUDDemo(); 
-		crud.createTable();
-		crud.insert1Value();
+		crud.createTable(); // not needed ideally should be via one time sql scripts
+		crud.insert1Value(); // name should be insert
 		crud.insertAll();
 		crud.display();
 		crud.delete();
@@ -69,14 +69,14 @@ public class CRUDDemo
 	{
 		try
 		{
-			Connection connect = null; 
+			Connection connection = null; 
 			Statement stmt = null;
 			Singelton single=new Singelton();
-			connect=single.getConnection();
-			stmt=connect.createStatement();
-			connect.setAutoCommit(false);
+			connection=single.getConnection();
+			stmt=connection.createStatement();
+			connection.setAutoCommit(false);
 			String query=" INSERT INTO Book5(Bookname,noofpages,authorname)"+" VALUES(?,?,?,?)";
-			PreparedStatement  pstmt= connect.prepareStatement(query);
+			PreparedStatement  pstmt= connection.prepareStatement(query);
 			pstmt.setString(1,"Secret");
 			pstmt.setString(2,"T102"); 
 			pstmt.setInt(2,102);
@@ -94,9 +94,9 @@ public class CRUDDemo
 			pstmt.setString(4, "Swapnil");
 			pstmt.addBatch(); 
 			int[] count=pstmt.executeBatch(); 
-			connect.commit();
+			connection.commit();
 			stmt.close(); 
-			connect.close();
+			connection.close();
 			System.out.println(count.length+"Records inserted..... into Book10");                 
 		}
 		catch (Exception e) 
@@ -107,21 +107,21 @@ public class CRUDDemo
 	}
 	public void display() 
 	{
-		ResultSet rs=null; 
+		ResultSet resultSet=null; 
 		try
 		{
 			Connection connect = null; 
 			Singelton single=new Singelton();
 			connect=single.getConnection();
 			String query="Select*from Book10";
-			PreparedStatement  pstmt= connect.prepareStatement(query);
-			rs = pstmt.executeQuery();
-		    while(rs.next())
+			PreparedStatement  preparedStatement= connect.prepareStatement(query);
+			resultSet = preparedStatement.executeQuery();
+		    while(resultSet.next())
 		    {
-		    	System.out.println(rs.getString(1));
-		    	System.out.println(rs.getString(2));
-		    	System.out.println(rs.getInt(3));	
-		    	System.out.println(rs.getString(4));
+		    	System.out.println(resultSet.getString(1));
+		    	System.out.println(resultSet.getString(2));
+		    	System.out.println(resultSet.getInt(3));	
+		    	System.out.println(resultSet.getString(4));
 		    	
 		    	System.out.println(" ");
 		    }
