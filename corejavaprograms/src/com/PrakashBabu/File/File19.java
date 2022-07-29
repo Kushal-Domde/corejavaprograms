@@ -2,8 +2,8 @@
 
 package com.PrakashBabu.File;
 import java.io.*;
-public class File19 {
-
+public class File19 
+{
 	public static void main(String[] args) throws Exception
 	{
 		BufferedReader bufferedReader= new BufferedReader(new FileReader("names.txt"));
@@ -15,5 +15,4 @@ public class File19 {
 		}
 		bufferedReader.close();
 	}
-
 }
