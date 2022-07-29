@@ -1,4 +1,4 @@
-// WAP to copy 50% content of one file to another
+// WAP to copy 50% content of one file to another file
 
 package com.PrakashBabu.File;
 import java.io.*;

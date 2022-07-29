@@ -19,6 +19,7 @@ public class File10
 		byte[] bt=data.getBytes();
 		fileOutputStream.write(bt);
 		fileOutputStream.close();
+		scanner.close();
 	}
 }	
 

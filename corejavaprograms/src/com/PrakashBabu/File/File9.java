@@ -1,4 +1,4 @@
-//Write a Java program to check if given pathname is a directory or a file.
+//Write a Java program to check if given pathname is a directory or a file and return true or false.
 
 package com.PrakashBabu.File;
 import java.io.*;
