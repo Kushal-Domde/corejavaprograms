@@ -10,13 +10,14 @@ public class File4
 	{
 		int count=0;
 		File file=new File("C:\\Users\\kaust\\OneDrive\\Desktop\\core_java_programs\\corejavaprograms\\corejavaprograms"); 
-		File[] s=file.listFiles();
-	 	for(File s1:s) 
+		File [] files=file.listFiles();
+		System.out.println("List of all Files is:");
+	 	for(File f1:files) 
 		{
-			if(s1.isFile()) 
+			if(f1.isFile()) 
 			{
 				count++;
-				System.out.println("File: "+s1.getName());
+				System.out.println("File: "+f1.getName());
 			}
 		}
 		System.out.println("total No of files in specified folder is"+count);

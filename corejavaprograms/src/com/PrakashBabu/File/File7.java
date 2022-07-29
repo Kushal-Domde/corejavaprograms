@@ -27,5 +27,4 @@ public class File7
            System.out.println(mydirectory.getAbsolutePath() + " cannot Read.");
         }
 	}
-
 }
