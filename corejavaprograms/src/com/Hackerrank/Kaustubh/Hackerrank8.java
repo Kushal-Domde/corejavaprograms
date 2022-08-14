@@ -16,6 +16,7 @@ public class Hackerrank8
            String ip=scanner.next();
            System.out.println(ip.matches(new MyRegex().pattern));
        }       
+       scanner.close();
     }
 }
 class MyRegex 

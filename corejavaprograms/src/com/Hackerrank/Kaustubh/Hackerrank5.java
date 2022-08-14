@@ -13,5 +13,7 @@ public class Hackerrank5
 		BigInteger b = new BigInteger(scanner.next());
 		System.out.println(a.add(b));
 		System.out.println(a.multiply(b));
+		scanner.close();
 	}
+	
 }
