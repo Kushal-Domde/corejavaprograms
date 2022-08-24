@@ -1,5 +1,4 @@
 package com.kaustubh.database.studentdb.model;
-
 public class Student 
 {
 		public String bookname; 
@@ -18,7 +17,7 @@ public class Student
 		}
 		public String getBookNAME() {
 			return bookname;
-		}
+		} 
 		public void setBookID(String bookid) {
 			this.bookid= bookid;
 		}

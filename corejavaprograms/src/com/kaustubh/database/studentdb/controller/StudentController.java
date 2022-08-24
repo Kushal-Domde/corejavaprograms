@@ -18,11 +18,19 @@ public class StudentController
 	}
 	public static void main(String[] args) throws SQLException
 	{
-		Student student=new Student("Secret","T104",170,"Rhonda Byrne");
-		StudentDAOImpl studentDAOImpl=new StudentDAOImpl();
-		studentDAOImpl.saveStudent(student);
+		Student student=new Student("Rich Dad poor Dad","T101",100,"Robert Kiyosaki");
 //		Student student1=new Student("Secret","T104",170,"Rhonda Byrne");
 //		Student student2=new Student("Money","T107",205,"BSR");
-//		Student student3=new Student("Magic","T100",300,"Rhonda Byrne");
+//		Student student3=new Student("Magic","T109",300,"Rhonda Byrne");
+		StudentDAOImpl studentDAOImpl=new StudentDAOImpl();
+//		studentDAOImpl.saveStudent(student);
+//		studentDAOImpl.saveStudent(student1);
+//		studentDAOImpl.saveStudent(student2);
+//		studentDAOImpl.saveStudent(student3);
+//		studentDAOImpl.getStudent();
+//		studentDAOImpl.deleteStudent("T109");
+//		studentDAOImpl.deleteAllStudent(student);
+		studentDAOImpl.getAllStudent(student);
+
 	}
 }

@@ -5,6 +5,7 @@ public interface StudentDAO
 {
 	public boolean saveStudent(Student student) throws SQLException;
 	public  void getStudent();
-	public  void deleteStudent(int id);
+	public  void deleteStudent(String bookid);
+	public  void deleteAllStudent(Student student);
 	public  void getAllStudent(Student student);
 }
