@@ -10,11 +10,35 @@ import com.kaustubh.database.studentdb.service.StudentServiceImpl;
 public class StudentController 
 {
 	private StudentService studentService;
-	void test() throws SQLException
+	public void saveStudent() throws SQLException
 	{
 		studentService=new StudentServiceImpl();
 		Student student=new Student("Rich Dad poor Dad","T101",100,"Robert Kiyosaki");
 		studentService.saveStudent(student);
+	}
+	public  void getStudent()
+	{
+		studentService=new StudentServiceImpl();
+		Student student=new Student("Rich Dad poor Dad","T101",100,"Robert Kiyosaki");
+		studentService.getStudent();
+	}
+	public void deleteStudent(String bookid)
+	{
+		studentService=new StudentServiceImpl();
+		Student student=new Student("Rich Dad poor Dad","T101",100,"Robert Kiyosaki");
+		studentService.deleteStudent(bookid);
+	}
+	public  void deleteAllStudent()
+	{
+		studentService=new StudentServiceImpl();
+		Student student=new Student("Rich Dad poor Dad","T101",100,"Robert Kiyosaki");
+		studentService.deleteAllStudent(student);
+	}
+	public  void getAllStudent()
+	{
+		studentService=new StudentServiceImpl();
+		Student student=new Student("Rich Dad poor Dad","T101",100,"Robert Kiyosaki");
+		studentService.getAllStudent(student);
 	}
 	public static void main(String[] args) throws SQLException
 	{

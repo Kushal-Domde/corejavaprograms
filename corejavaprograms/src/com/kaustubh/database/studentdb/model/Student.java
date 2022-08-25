@@ -1,39 +1,46 @@
 package com.kaustubh.database.studentdb.model;
 public class Student 
 {
-		public String bookname; 
-		public String bookid; 
-		public int noofpages;
-		public String authorname;
-		public Student(String bookname,String bookid,int noofpages,String authorname)
-		{
-			this.bookname=bookname; 
-			this.bookid=bookid;
-			this.noofpages=noofpages;
-			this.authorname=authorname;
-		}
-		public void setBookNAME(String bookname) {
-			this.bookname= bookname;
-		}
-		public String getBookNAME() {
-			return bookname;
-		} 
-		public void setBookID(String bookid) {
-			this.bookid= bookid;
-		}
-		public String getBookID() {
-			return bookid;
-		}
-		public void setNoofpages(int noofpages) {
-			this.noofpages = noofpages;
-		}
-		public int getNoofpages() {
-			return noofpages;
-		}
-		public void setAUTHORNAME(String authorname) {
-			this.authorname= authorname;
-		}
-		public String getAUTHORNAME() {
-			return authorname;
-		}
-}
+	public String bookName; 
+	public String bookId; 
+	public int noOfPages;
+	public String authorName;
+	public Student(String bookName, String bookId, int noOfPages, String authorName) 
+	{
+		super();
+		this.bookName = bookName;
+		this.bookId = bookId;
+		this.noOfPages = noOfPages;
+		this.authorName = authorName;
+	}
+	
+	public String getBookName() {
+		return bookName;
+	}
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
+	}
+	public String getBookId() {
+		return bookId;
+	}
+	public void setBookId(String bookId) {
+		this.bookId = bookId;
+	}
+	public int getNoOfPages() {
+		return noOfPages;
+	}
+	public void setNoOfPages(int noOfPages) {
+		this.noOfPages = noOfPages;
+	}
+	public String getAuthorName() {
+		return authorName;
+	}
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
+	}
+	@Override
+	public String toString() {
+		return "Student [bookName=" + bookName + ", bookId=" + bookId + ", noOfPages=" + noOfPages + ", authorName="
+				+ authorName + "]";
+	}
+}		

@@ -19,12 +19,19 @@ public class StudentServiceImpl implements StudentService
 	public void getStudent() {
 		studentDAO.getStudent();
 	}
-	public void deleteStudent(int id)
+	public void deleteStudent(String id)
 	{ 
 		studentDAO.deleteStudent(id);
 	}
-	public  void getAllStudent(Student student)
+	public void deleteAllStudent(Student student)
+	{
+		studentDAO.deleteAllStudent(student);
+	}
+	public void getAllStudent(Student student)
 	{
 		studentDAO.getAllStudent(student);
 	}
+
+		
 }
+
