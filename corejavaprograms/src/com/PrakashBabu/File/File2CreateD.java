@@ -4,7 +4,8 @@ package com.PrakashBabu.File;
 
 import java.io.*;
 
-public class File2 
+public class File2CreateD
+
 {
 	public static void main(String[] args)throws IOException
 	{

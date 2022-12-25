@@ -3,7 +3,7 @@ package com.PrakashBabu.File;
 
 import java.io.*;
 
-public class File1 
+public class File1CreateF 
 {
 	public static void main(String[] args)throws IOException
 	{

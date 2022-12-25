@@ -4,7 +4,7 @@ package com.PrakashBabu.File;
 
 import java.io.*;
 
-public class File5 
+public class File5DisplayAll
 {
 	public static void main(String[] args)throws IOException 
 	{
