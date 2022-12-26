@@ -28,6 +28,6 @@ public class LargestString
 	}
 	public static void main(String[] args) 
 	{
-				LargestString.maximumminimum("I Belong To India");
+				LargestString.maximumminimum("I Belong to India");
 	}
 }
