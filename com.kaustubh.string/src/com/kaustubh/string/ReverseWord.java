@@ -1,7 +1,7 @@
 // WAJP to reverse each word in a string
 
 package com.kaustubh.string; 
-public class ProgramString
+public class ReverseWord
 {		
 	    static String reverseString(String str) 
 	    {
@@ -16,11 +16,6 @@ public class ProgramString
 	            reverse+=" ";
 	        }
 	        return reverse;
-	    }
-	    public static void main(String[] args) 
-	    {
-	        String reverse=ProgramString.reverseString("Diamond Kaustubh Domde");
-	        System.out.println(reverse);
 	    }
 }
     

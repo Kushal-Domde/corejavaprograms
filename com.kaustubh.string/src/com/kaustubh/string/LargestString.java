@@ -1,3 +1,4 @@
+// WAJP to find largest word in a String 
 package com.kaustubh.string;
 
 public class LargestString 
@@ -24,10 +25,5 @@ public class LargestString
 			}	
 		}
 		System.out.println("Largest word is "+largestWord+" and smallest word is "+smallestWord);
-		
-	}
-	public static void main(String[] args) 
-	{
-				LargestString.maximumminimum("I Belong to India");
 	}
 }
