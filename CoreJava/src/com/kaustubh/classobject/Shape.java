@@ -1,3 +1,5 @@
+//WAJP to Implement Shape Interface using Circle and Rectangle Class
+
 package com.kaustubh.classobject;
 
 public interface Shape 

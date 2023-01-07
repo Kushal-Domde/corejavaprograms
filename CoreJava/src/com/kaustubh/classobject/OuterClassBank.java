@@ -1,4 +1,3 @@
-// WAJP to Illustrates Use of Instance Inner Class
 // Java Program to Create Outer Class Bank Account and the Inner Class Interest in it
 
 package com.kaustubh.classobject;
